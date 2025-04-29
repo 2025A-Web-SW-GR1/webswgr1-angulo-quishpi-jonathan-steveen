@@ -4,14 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /*ESTOS ES CSS PURO Y DURO*/
+        /*Selector por id*/
+        #titulo-muy-especial {
+            color: white;
+            background-color: black;
+
+        }
+        /*Selector por etiqueta*/
+        h1,h2,h3,h4,h5,h6 {
+            margin: 10px;
+            padding-left: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-right: 1px;
+            border: green 14px solid;
+            border-style: dashed;
+        }
+        .semanas{
+            list-style-type: upper-alpha;
+        }
+        .secciones{
+            list-style-type:upper-roman ;
+        }
+        /*Selector por relacion de etiquetas*/
+        /*li tiene un hijo de tipo a*/
+        li > a {
+            color: blue;
+        }
+        /*Pseudoclase*/
+        ul > li:hover {
+            color: red;
+        }
+        /*Solo al primer hijo*/
+        ul > li:first-child {
+            color: green;
+        }
+        /*solo al hijo (n)*/
+        ul > li:nth-child(4) {
+            color: purple;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
+    <h1 id="titulo-muy-especial">Hola Mundo</h1>
     <h2>un h2</h2>
     <h3>un h3</h3>
     <h4>un h4</h4>
     <h5>un h5</h5>
     <h6 style="font-size:40px">un h6</h6>
     <p>un parrafo</p>
+    <a href="www.google.com"></a>
+    <ul>
+        <li>
+            <a href="/index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/a-tablas-anclas.html">
+                Tablas y anclas
+            </a>
+        </li>
+        <li>
+            <a href="/index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/a-tablas-anclas.html">
+                Tablas y anclas
+            </a>
+        </li>
+    </ul>
+    <ol class="semanas">
+        <li>Lunes
+            <ol class="secciones">
+                <li>Am</li>
+                <li>Pm</li>
+            </ol>
+        </li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+    </ol>
+
+    <p>Submenu para links interno (#)</p>
+    <ul>
+        <li><a href="#parrafo1">Ir Parrafo 1</a></li>
+        <li><a href="#parrafo2">Ir Parrafo 2</a></li>
+    </ul>
+
+    <p id="parrafo1">Parrafo 1</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p id="parrafo2">Parrafo 2</p>
+    <h2>Imgenes</h2>
+    <img src="https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/color-fondo-imagen-r.png" alt="Colibri de colores">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nota</th>
+        </tr>
+        <tr>
+            <td>Jonathan</td>
+            <td>Angulo</td>
+            <td>10/10</td>
+        </tr>
+    </table>
 </body>
 </html>
