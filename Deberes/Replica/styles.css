@@ -1,0 +1,31 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  header {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+  }
+
+  .hero-banner1 {
+    background-image: url('/Deberes/Replica/img/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-banner2 {
+    background-image: url('/Deberes/Replica/img/banner2.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .display-4{
+    align-self:flex-start;
+  }
