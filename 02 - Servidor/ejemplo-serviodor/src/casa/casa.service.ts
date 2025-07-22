@@ -15,7 +15,9 @@ export class CasaService {
     ){
         return this.casaRepository.find(options);
     }
-
+    buscarUnoPorUsername(username: string){
+        return this.casaRepository.findOneByOrFail({ username });
+    }
     crearUno(nombre: string, valor: number, imagenUrl: string){
         const nuevaInstancia = this.casaRepository.create();
         nuevaInstancia.nombre = nombre;

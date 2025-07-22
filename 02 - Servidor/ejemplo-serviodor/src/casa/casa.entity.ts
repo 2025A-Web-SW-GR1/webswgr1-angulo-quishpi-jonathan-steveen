@@ -9,6 +9,12 @@ export class Casa {
   @Column({ length: 500 })
   nombre: string;
 
+  @Column({ length: 500 })
+  username: string;
+
+  @Column({ length: 20 })
+  password: string;
+
   @Column()
   valor: number;
 
