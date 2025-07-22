@@ -7,9 +7,7 @@ export class AuthController {
   constructor(
     private readonly casaService: CasaService
   ) { }
-
-
-
+  // Vista de login
   @Get('login-vista')
   async loginVista(
     @Res() res: any,
@@ -19,7 +17,6 @@ export class AuthController {
       mensaje: query.mensaje ?? ''
     });
   }
-
   // LoginMetodo
   @Post('login')
   async login(
@@ -47,7 +44,6 @@ export class AuthController {
       res.redirect('/auth/login-vista?mensaje=Usuario no encontrado');
     }
   }
-
   // Eliminar la sesion
   @Get('logout')
   logout(
@@ -61,7 +57,7 @@ export class AuthController {
     });
     res.redirect('/auth/login-vista')
   }
-
+  // Obtener la sesion
   @Get('sesion')
   async sesion(
     @Res() res: any,
