@@ -75,4 +75,25 @@ export class AuthController {
       casa,
     });
   }
+  // Obtener los datos de la casa del usuario logeado
+  @Get('viewData')
+  async viewData(
+    @Res() res: any,
+    @Session() session: Record<string, any>
+  ) { // Using @Session() decorator
+    let casa: any = {};
+    let casas: any[] = [];
+    if (session?.user?.username) {
+      try {
+        casa = await this.casaService.buscarUnoPorUsername(session.user.username);
+        casas = await this.casaService.obtenerTodos();
+      } catch (e) {
+        console.error('No se encontro usuario');
+      }
+    }
+    res.render('data', {
+      casa,
+      casas,
+    });
+  }
 }
